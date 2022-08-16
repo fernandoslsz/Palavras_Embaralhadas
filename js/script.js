@@ -1,3 +1,5 @@
+const  wordText = document.querySelector(".word");
+
 const initgame = () => {
     let randomObj = words[Math.floor(Math.random() * words.length)]; // pegando um objeto aleatório da variável words
     let wordArray = randomObj.word.split(""); // separando cada letra da palavra aleatória
@@ -6,7 +8,8 @@ const initgame = () => {
         [wordArray[i], wordArray[j]] = [wordArray[j], wordArray[i]];// embaralhando e trocando as letras aleatórias da variável wordArray
 
     }
-    
+    wordText.innerText = wordArray;
+    console.log(wordArray, randomObj.word);
 }
 
 initgame();

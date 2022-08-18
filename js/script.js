@@ -8,7 +8,7 @@ const initgame = () => {
         [wordArray[i], wordArray[j]] = [wordArray[j], wordArray[i]];// embaralhando e trocando as letras aleatórias da variável wordArray
 
     }
-    wordText.innerText = wordArray;
+    wordText.innerText = wordArray.join("");
     console.log(wordArray, randomObj.word);
 }
 

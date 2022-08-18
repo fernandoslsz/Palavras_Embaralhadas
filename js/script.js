@@ -1,4 +1,5 @@
 const  wordText = document.querySelector(".word");
+const  hintText = document.querySelector(".hint span");
 
 const initgame = () => {
     let randomObj = words[Math.floor(Math.random() * words.length)]; // pegando um objeto aleatório da variável words
@@ -9,7 +10,8 @@ const initgame = () => {
 
     }
     wordText.innerText = wordArray.join("");
-    console.log(wordArray, randomObj.word);
+    hintText.innerText = randomObj.hint;
+    console.log(randomObj.hint);
 }
 
 

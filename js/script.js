@@ -17,3 +17,4 @@ const initgame = () => {
 
 
 initgame();
+refreshBTN.addEventListener("click", initgame); // Usado para embaralhar as letras e para mostrar a dica para adivinha a palavra

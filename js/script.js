@@ -12,7 +12,7 @@ const initgame = () => {
     }
     wordText.innerText = wordArray.join(""); // Usado para mostrar as letras embaralhadas sem vírgula
     hintText.innerText = randomObj.hint;// Usado para mostrar a dica para adivinhar a palavra
-    console.log(wordArray, randomObj.word);
+    console.log(randomObj);
 }
 
 

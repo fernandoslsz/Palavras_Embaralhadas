@@ -1,5 +1,6 @@
 const  wordText = document.querySelector(".word");
 const  hintText = document.querySelector(".hint span");
+const  refreshBTN = document.querySelector(".refresh-word");
 
 const initgame = () => {
     let randomObj = words[Math.floor(Math.random() * words.length)]; // pegando um objeto aleatório da variável words
@@ -9,9 +10,9 @@ const initgame = () => {
         [wordArray[i], wordArray[j]] = [wordArray[j], wordArray[i]];// embaralhando e trocando as letras aleatórias da variável wordArray
 
     }
-    wordText.innerText = wordArray.join("");
-    hintText.innerText = randomObj.hint;
-    console.log(randomObj.hint);
+    wordText.innerText = wordArray.join(""); // Usado para mostrar as letras embaralhadas sem vírgula
+    hintText.innerText = randomObj.hint;// Usado para mostrar a dica para adivinhar a palavra
+    console.log(wordArray, randomObj.word);
 }
 
 

@@ -1,8 +1,8 @@
-const  wordText = document.querySelector(".word");
-const  hintText = document.querySelector(".hint span");
-const  refreshBTN = document.querySelector(".refresh-word");
-const  checkwordBTN = document.querySelector(".check-word");
-const inputField = document.querySelector("input");
+const  wordText = document.querySelector(".word"),
+hintText = document.querySelector(".hint span"),
+refreshBTN = document.querySelector(".refresh-word"),
+checkwordBTN = document.querySelector(".check-word"),
+inputField = document.querySelector("input");
 
 
 const initgame = () => {
@@ -21,8 +21,8 @@ const initgame = () => {
 
 initgame();
 const checkWord = () => {
-    let userWord = inputField.value.toLocateLowerCase();
+    let userWord = inputField.value.toLocaleLowerCase();
     console.log(userWord)
 }
 refreshBTN.addEventListener("click", initgame); // Usado para embaralhar as letras e para mostrar a dica para adivinha a palavra
-checkwordBTN.addEventListener("click", checkWord)
+checkwordBTN.addEventListener("click", checkWord);

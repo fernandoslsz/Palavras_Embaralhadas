@@ -12,4 +12,5 @@ const initgame = () => {
     console.log(wordArray, randomObj.word);
 }
 
+
 initgame();

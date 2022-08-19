@@ -4,6 +4,8 @@ refreshBTN = document.querySelector(".refresh-word"),
 checkwordBTN = document.querySelector(".check-word"),
 inputField = document.querySelector("input");
 
+let correctWord;
+
 
 const initgame = () => {
     let randomObj = words[Math.floor(Math.random() * words.length)]; // pegando um objeto aleatório da variável words
@@ -15,6 +17,7 @@ const initgame = () => {
     }
     wordText.innerText = wordArray.join(""); // Usado para mostrar as letras embaralhadas sem vírgula
     hintText.innerText = randomObj.hint;// Usado para mostrar a dica para adivinhar a palavra
+    correctWord = randomObj.word.toLocaleLowerCase();
     console.log(randomObj);
 }
 
@@ -22,6 +25,7 @@ const initgame = () => {
 initgame();
 const checkWord = () => {
     let userWord = inputField.value.toLocaleLowerCase();
+    if(userWord !== correctWord) return alert('Oops! ${userWord} is not a correct wordd' );
     console.log(userWord)
 }
 refreshBTN.addEventListener("click", initgame); // Usado para embaralhar as letras e para mostrar a dica para adivinha a palavra

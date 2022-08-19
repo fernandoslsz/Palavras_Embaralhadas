@@ -8,6 +8,7 @@ inputField = document.querySelector("input");
 let correctWord, timer;
 
 const initTimer = maxTime => {
+    clearInterval(timer);
     timer    = setInterval(() => {
         if(maxTime > 0) {
             maxTime--;
@@ -21,7 +22,7 @@ const initTimer = maxTime => {
 }
 
 const initgame = () => {
-    initTimer(30); // Chamando a função para ativar o cronômetro
+    initTimer(31); // Chamando a função para ativar o cronômetro
     let randomObj = words[Math.floor(Math.random() * words.length)]; // pegando um objeto aleatório da variável words
     let wordArray = randomObj.word.split(""); // separando cada letra da palavra aleatória
     for ( let i = wordArray.length - 1; i > 0; i--) {
@@ -35,7 +36,7 @@ const initgame = () => {
     inputField.value = "";// Deixando o campo de preenchimento vazio
     inputField.setAttribute("maxlength", correctWord.length); // Configurando um limite de caracteres
 
-    console.log(randomObj);
+    
 }
 
 

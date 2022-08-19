@@ -1,23 +1,27 @@
 const  wordText = document.querySelector(".word"),
 hintText = document.querySelector(".hint span"),
-timeText = document.querySelector(".hint b"),
+timeText = document.querySelector(".time b"),
 refreshBTN = document.querySelector(".refresh-word"),
 checkwordBTN = document.querySelector(".check-word"),
 inputField = document.querySelector("input");
 
-let correctWord;
+let correctWord, timer;
 
 const initTimer = maxTime => {
-    time = setInterval(() => {
+    timer    = setInterval(() => {
         if(maxTime > 0) {
             maxTime--;
-            timeText.innerHTML = maxTime;
+            return timeText.innerHTML = maxTime;
         }
+        clearInterval(timer);
+        alert(`Time off! ${userWord.toUpperCase()} was the correct word`);
+        initgame();
+
     },1000);
 }
 
 const initgame = () => {
-    initTimer(30) // Chamando a função para ativar o cronômetro
+    initTimer(30); // Chamando a função para ativar o cronômetro
     let randomObj = words[Math.floor(Math.random() * words.length)]; // pegando um objeto aleatório da variável words
     let wordArray = randomObj.word.split(""); // separando cada letra da palavra aleatória
     for ( let i = wordArray.length - 1; i > 0; i--) {

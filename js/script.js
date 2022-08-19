@@ -1,13 +1,23 @@
 const  wordText = document.querySelector(".word"),
 hintText = document.querySelector(".hint span"),
+timeText = document.querySelector(".hint b"),
 refreshBTN = document.querySelector(".refresh-word"),
 checkwordBTN = document.querySelector(".check-word"),
 inputField = document.querySelector("input");
 
 let correctWord;
 
+const initTimer = maxTime => {
+    time = setInterval(() => {
+        if(maxTime > 0) {
+            maxTime--;
+            timeText.innerHTML = maxTime;
+        }
+    },1000);
+}
 
 const initgame = () => {
+    initTimer(30) // Chamando a função para ativar o cronômetro
     let randomObj = words[Math.floor(Math.random() * words.length)]; // pegando um objeto aleatório da variável words
     let wordArray = randomObj.word.split(""); // separando cada letra da palavra aleatória
     for ( let i = wordArray.length - 1; i > 0; i--) {

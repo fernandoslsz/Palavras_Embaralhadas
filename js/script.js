@@ -18,6 +18,9 @@ const initgame = () => {
     wordText.innerText = wordArray.join(""); // Usado para mostrar as letras embaralhadas sem vírgula
     hintText.innerText = randomObj.hint;// Usado para mostrar a dica para adivinhar a palavra
     correctWord = randomObj.word.toLocaleLowerCase();
+    inputField.value = "";// Deixando o campo de preenchimento vazio
+    inputField.setAttribute("maxlength", correctWord.length); // Configurando um limite de caracteres
+
     console.log(randomObj);
 }
 
@@ -28,6 +31,7 @@ const checkWord = () => {
     if(!userWord) return alert("Please enter with a word");
     if(userWord !== correctWord) return alert(`Oops! ${userWord} is not a correct word`);
     alert(`Congrats! ${userWord.toUpperCase()} is a correct word`);
+    initgame();
     
 }
 refreshBTN.addEventListener("click", initgame); // Usado para embaralhar as letras e para mostrar a dica para adivinha a palavra

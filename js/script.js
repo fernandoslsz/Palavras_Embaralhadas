@@ -25,8 +25,9 @@ const initgame = () => {
 initgame();
 const checkWord = () => {
     let userWord = inputField.value.toLocaleLowerCase();
-    if(userWord !== correctWord) return alert('Oops! ${userWord} is not a correct wordd' );
-    console.log(userWord)
+    if(userWord !== correctWord) return alert(`Oops! ${userWord} is not a correct word`);
+    alert(`Congrats! ${userWord.toUpperCase()} is a correct word`);
+    
 }
 refreshBTN.addEventListener("click", initgame); // Usado para embaralhar as letras e para mostrar a dica para adivinha a palavra
 checkwordBTN.addEventListener("click", checkWord);

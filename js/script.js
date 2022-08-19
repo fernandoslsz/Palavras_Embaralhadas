@@ -25,6 +25,7 @@ const initgame = () => {
 initgame();
 const checkWord = () => {
     let userWord = inputField.value.toLocaleLowerCase();
+    if(!userWord) return alert("Please enter with a word");
     if(userWord !== correctWord) return alert(`Oops! ${userWord} is not a correct word`);
     alert(`Congrats! ${userWord.toUpperCase()} is a correct word`);
     

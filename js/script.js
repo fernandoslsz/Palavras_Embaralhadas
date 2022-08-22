@@ -15,7 +15,7 @@ const initTimer = maxTime => {
             return timeText.innerHTML = maxTime;
         }
         clearInterval(timer);
-        alert(`Time off! ${correctWord.toUpperCase()} was the correct word`);
+        alert(`Tempo esgotado! ${correctWord.toUpperCase()} era a palavra correta.`);
         initgame();
 
     },1000);
@@ -43,9 +43,9 @@ const initgame = () => {
 initgame();
 const checkWord = () => {
     let userWord = inputField.value.toLocaleLowerCase();
-    if(!userWord) return alert("Please enter with a word");
-    if(userWord !== correctWord) return alert(`Oops! ${userWord} is not a correct word`);
-    alert(`Congrats! ${userWord.toUpperCase()} is a correct word`);
+    if(!userWord) return alert("Por favor insira uma palavra");
+    if(userWord !== correctWord) return alert(`Desculpa! ${userWord} não é a palavra correta`);
+    alert(`Parabéns! ${userWord.toUpperCase()} é a palavra correta.`);
     initgame();
     
 }

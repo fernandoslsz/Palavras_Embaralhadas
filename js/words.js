@@ -1,15 +1,23 @@
 const words = [
     {
-        word: "addition",
-        hint: "The process of adding number"
+        word: "gado",
+        hint: "Conjunto de animais criados no campo para trabalhos agrícolas ou uso doméstico e industrial."
 
     },
     {
-        word: "meeting",
-        hint: "Event in which people come together"
+        word: "encontro",
+        hint: "Ato ou efeito de encontrar, de estar diante de alguém"
     },
     {
-        word: "number",
-        hint: "Math symbol used for counting"
-    }
+        word: "número",
+        hint: "Símbolo matemático usado para contagem"
+    },
+    {
+        word: "viagem",
+        hint: "Ação de se deslocar de um lugar para outro, geralmente, percorrendo uma longa distância."
+    },
+    {
+        word: "bolo",
+        hint: "Massa de farinha, geralmente com açúcar e ovos, além de outros ingredientes, geralmente de forma arredondada ou retangular, cozida ou assada."
+    },
 ]
